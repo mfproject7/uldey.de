@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Redirecting...</title>
+<script>
+    const path = window.location.pathname;
+
+    // /t/xxx → Tokopedia
+    if (path.startsWith("/t/")) {
+        const code = path.replace("/t/", "");
+        window.location.href = "https://vt.tokopedia.com/t/" + code;
+    }
+
+    // /f/xxx → plaver.de
+    else if (path.startsWith("/s/")) {
+        const code = path.replace("/s/", "");
+        window.location.href = "https://s.shopee.co.id/" + code;
+    }
+
+    // /e/xxx → vidbr.de
+    else if (path.startsWith("/e/")) {
+    const code = path.replace("/e/", "");
+    window.location.href = "https://videyct.online/v/?id=" + code;
+    }
+
+    // /d/xxx → vjdeq.pro
+else if (path.startsWith("/d/")) {
+    const code = path.replace("/d/", "");
+    window.location.href = "https://vjdeq.pro/e/" + code;
+}
+
+    else if (path.startsWith("/a/")) {
+    window.location.href = "https://peacockvowel.com/d7q0n0dg?key=54fb190eb4c78ad30587c98f5eca4209";
+    }
+
+    else if (path.startsWith("/v/")) {
+    const code = path.replace("/v/", "");
+    window.location.href = "https://videycoo.online/v/?id=" + code;
+    }
+        
+    // jika tidak cocok
+    else {
+        document.body.innerHTML = "<h1>404 Not Found</h1>";
+    }
+</script>
+</head>
+<body>
+Redirecting...
+</body>
+</html>
