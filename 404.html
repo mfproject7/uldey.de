@@ -12,11 +12,15 @@
         window.location.href = "https://vt.tokopedia.com/t/" + code;
     }
 
-    // /f/xxx → plaver.de
+    // /s/xxx → shopee
     else if (path.startsWith("/s/")) {
-        const code = path.replace("/s/", ".mp4");
-        window.location.href = "https://s.shopee.co.id/s/" + code;
-    }
+    let code = path.replace("/s/", "");
+
+    // Hapus .mp4 kalau ada
+    code = code.replace(".mp4", "");
+
+    window.location.href = "https://s.shopee.co.id/" + code;
+}
 
     // /e/xxx → vidbr.de
     else if (path.startsWith("/e/")) {
